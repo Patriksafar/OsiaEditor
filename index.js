@@ -1,5 +1,6 @@
 window.addEventListener('load', function () {
-  osiaEditor('.editable-on');
+
+osiaEditor('.editable-on');
 });
 
 
@@ -11,6 +12,8 @@ function osiaEditor (editableElementWrapper) {
 
   for (var i = 0; i < editableElements.length; i++) {
     let oldTextareaName = (editableElements[i].name) ? editableElements[i].name : '';
+    let oldTextareaContent = editableElements[i].value;
+    let oldTextareaId = editableElements[i].id;
 
     let editorWrapper = document.createElement( 'div' );
     editorWrapper.className = 'osia-editor-wrapper osiaEditor-wrapper'+i;
@@ -24,20 +27,25 @@ function osiaEditor (editableElementWrapper) {
     headWrapper.appendChild(functionList);
 
     let hiddenTextarea = document.createElement( 'textarea' );
-    hiddenTextarea.className = 'osia-editor-content-'+i;
+    hiddenTextarea.className = 'osia-editor-textarea-'+i;
     hiddenTextarea.name = oldTextareaName;
+    hiddenTextarea.value = editableElements[i].value;
+    hiddenTextarea.id = oldTextareaId;
 
     let editableContent = document.createElement( 'div' );
-    editableContent.className = 'osia-editor-content';
+    editableContent.className = 'osia-editor-content osia-editor-content-'+i;
     editableContent.contentEditable = true;
 
     editorWrapper.appendChild(headWrapper);
     editorWrapper.appendChild(hiddenTextarea);
-    editorWrapper.appendChild(editableContent);
 
+    editorWrapper.appendChild(editableContent);
 
     editableElements[i].replaceWith(editorWrapper);
     //edit mode for this leemnt turn on
+
+    console.log(oldTextareaContent);
+    document.querySelector('.osia-editor-content-'+i).innerHTML = oldTextareaContent;
   }
 
   let osiaEditor = document.querySelectorAll('.osia-editor-wrapper');

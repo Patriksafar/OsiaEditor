@@ -1,0 +1,70 @@
+.osia-editor-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+}
+.osia-editor-wrapper textarea {
+  display: none;
+}
+.osia-editor-header {
+  padding: 10px;
+}
+.osia-editor-header ul,
+.osia-editor-header li {
+  list-style: none;
+  display: inline-block;
+}
+.osia-editor-header ul {
+  margin: 0px;
+  padding: 0px;
+}
+.osia-editor-header-function-list {
+  background: #E6E9ED;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.osia-editor-content {
+  padding: 8px;
+  outline: none;
+}
+.osia-editor-button {
+  text-align: center;
+}
+.osia-editor-button button {
+  font-family: "Times New Roman", Times, serif;
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  padding: 8px 12px;
+  min-width: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+.osia-editor-button .bold {
+  font-weight: bold;
+}
+.osia-editor-button .italic {
+  font-style: italic;
+}
+.osia-editor-button .underline {
+  text-decoration: underline;
+}
+.osia-editor-button:hover,
+.osia-editor-button:active,
+.osia-editor-button:focus {
+  background: #cacaca;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.osia-editor-select {
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #c7c7c7;
+  padding: 2px;
+  margin: 0px 10px;
+}
