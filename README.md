@@ -1,6 +1,6 @@
-# Parcel static content
+# WYSIWYG editor
 
-## Instalace
+## Install
 
 ```
 npm install -g parcel-bundler
